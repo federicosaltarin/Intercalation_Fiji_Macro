@@ -6,6 +6,8 @@ dir = getDirectory("Choose a Directory ");
 //Gets the list of all files inside the folder (Note: Keep only the tiff files to analyze and nothing else!)
 files = getFileList( dir );
 
+first_image = dir + files[1]
+
 // Create sub-directories for summaries and analysis masks
 out_dir = dir + "/Analysis/"; // 
 File.makeDirectory(out_dir); 
@@ -17,9 +19,12 @@ summ_dir = out_dir + "/Summary/"; //
 File.makeDirectory(summ_dir); 
 
 // Setup the threshold level to use later for analysis
+open( first_image );
+setSlice(mid_slice)
 run("Threshold...");
 waitForUser("Set the Treshold", "Set the Treshold and click OK");
 getThreshold(lower, upper);
+close();
 //print (lower,upper);
 
 setBatchMode(true)
