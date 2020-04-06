@@ -1,6 +1,6 @@
 # Intercalation Fiji (imageJ) macro
 ImageJ Macro for folder loop analysis of timelapse movies.
-The idea is to automatically quantify all the timelapse movies in a folder. 
+The idea is to automatically quantify all the timelapse movies in a folder. The movies are acquired with automated widefield microscopy, using a 96-well plate format. 
 In my specific case I have Lifeact-GFP positive endothelial cells that are displaced by melanoma cells. During intercalation of melanoma cells into the endothelial layer, the GFP signal is displaced leaving background "holes". The Macro  uses thresholding to identify this "holes". It loops through all the timepoints of all the movies and it saves the results per movie. As final results, the macro returns a CSV file, per movie, reporting the number and area of the quantified displacement events, per timepoint. Moreover it saves the binary masks obtained by thresholding.
 This results can then be visualized.
 What I normally do:
