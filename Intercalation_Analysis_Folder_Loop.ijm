@@ -1,4 +1,7 @@
-//Set the middel slice for later
+///author: Federico Saltarin///
+///////////////////////////////////////////////////////////////////////////////////////
+
+//Set the middle slice for later
 mid_slice = round(nSlices/2);
 
 //Choose the directory with all the TIFF files to analyze
